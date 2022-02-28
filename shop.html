@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Enterprises - Shop</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="framework.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://kit.fontawesome.com/091da124de.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #696969;
+            color: aliceblue;
+        }
+        .navbar-right {
+            font-size: 120%;
+        }
+        h1 {
+            text-align: center;
+            margin: 5%;
+        }
+        main div {
+            text-align: center;
+        }
+        div img {
+            margin-bottom: 1%;
+            width: 90%;
+        }
+        main button {
+            background-color: yellow;
+            color: black;
+            border-radius: 10px;
+            padding: 3%;
+            box-shadow: #696969;
+            margin-bottom: 2%;
+        }
+        #cart {
+            display: none;
+        }
+        form {
+            background-color: beige;
+            color: #696969;
+            padding: 2%;
+            text-align: left;
+        }
+        #cartShow {
+            background-color: aliceblue;
+            color: slategrey;
+            height: 85vh;
+        }
+        select {
+            cursor: pointer;
+        }
+        .price {
+            font-size: 150%;
+        }
+    </style>
+</head>
+<body class="dark">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Jorge Shop</a>
+          </div>
+          <ul class="nav navbar-nav">
+              <li><a href="shop.html">Shop</a></li>
+            <li><a href="index.html">Jorge Enterprises Website</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li onclick="showCart()"><a>CART <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+      <main>
+          <section id="notCart">
+            <h1>JORGE MEGA SALE!!!</h1>
+            <div class="col-xs-12 col-md-4">
+                <img src="beginspackle.jpg" alt="Beginner Spackle"> <br>
+                <span>Beginner Spackle</span> <br>
+                <span class="price">$4.99</span> <br>
+                <button onclick="beg++; total = total + 4.99;">ADD TO CART</button>
+            </div>
+  
+            <div class="col-xs-12 col-md-4">
+                <img src="ogspackle.PNG" alt="Original Spackle"> <br>
+                <span>Original Spackle</span> <br>
+                <span class="price">$9.99</span> <br>
+                <button onclick="og++; total = total + 9.99;">ADD TO CART</button>
+            </div>
+  
+            <div class="col-xs-12 col-md-4">
+              <img src="prospackle.jpg" alt="Pro Spackle"> <br>
+              <span>Pro Spackle</span> <br>
+              <span class="price">$14.99</span> <br>
+              <button onclick="pro++; total = total + 14.99;">ADD TO CART</button>
+            </div>
+          </section>
+          
+        <section id="cart">
+            <div class="col-sm-9">
+                <h2>INFORMATION (THIS INFORMATION DOES NOT GO ANYWHERE. THIS IS JUST FRONT END CODE.)</h2>
+                <form>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name"> <br>
+                    <label for="Address">Address:</label>
+                    <input type="text" id="Address"> <br>
+                    <label for="card">Card Number (if left empty, payment at pickup is assumed):</label>
+                    <input type="text" id="card"> <br>
+                    <input type="submit" value="Purchase"> 
+                </form>
+            </div>
+            <div class="col-sm-3" id="cartShow">
+                <h4>CART:</h4> <br>
+                Beginner Spackle x<span id="beg">0</span> <br>
+                Orginal Spackle x<span id="og">0</span> <br>
+                Pro Spackle x<span id="pro">0</span>
+                <h3>TOTAL: <span id="total"></span></h3>
+            </div>
+        </section>
+      </main>
+<script src="index.js"></script>
+</body>
+</html>
